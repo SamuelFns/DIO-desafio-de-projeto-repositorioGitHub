@@ -8,4 +8,5 @@ class Pessoa {
 fun main(){
     var pessoa = Pessoa()
     println(pessoa.name)
+    println*((pessoa.cpf))
 }
