@@ -1,12 +1,23 @@
 package digionebank
 
-class Pessoa {
-    var name:String? = "Samuel"
-    var cpf:String? = "000.000.000-00"
+import java.math.BigDecimal
+
+class Conta(agencia:String,numero:String,saldo:Float){
+    val Agencia:String = agencia
+    val Numero:String = numero
+    var Saldo:Float = saldo
+
+    fun Deposito(valor:Float){
+        Saldo+=valor
+    }
+    fun Saque(valor:Float){
+        Saldo-=valor
+    }
+
 }
 
+
 fun main(){
-    var pessoa = Pessoa()
-    println(pessoa.name)
-    println(pessoa.cpf)
+    var novaConta = Conta("Simoes","123456",2000.00F)
+    println(novaConta)
 }
